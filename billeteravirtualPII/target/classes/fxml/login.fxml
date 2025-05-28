@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="384.0" prefWidth="493.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.billeteravirtual.controller.LoginController">
+    <children>
+        <Text fill="#1d5a8d" layoutX="172.0" layoutY="109.0" style="-fx-font-size: 24; -fx-font-weight: bold;" text="Billetera Virtual" textAlignment="JUSTIFY" wrappingWidth="221.81481170654297">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Text>
+        <Button defaultButton="true" layoutX="184.0" layoutY="253.0" onAction="#handleLogin" text="Iniciar Sesión" />
+        <Button layoutX="289.0" layoutY="253.0" onAction="#goToSignup" text="Registrarse" />
+        <PasswordField fx:id="pfPassword" layoutX="289.0" layoutY="178.0" prefHeight="26.0" prefWidth="162.0" style="-fx-border-color: #1D5A8D;" />
+
+        <Label layoutX="172.0" layoutY="183.0" text="Contraseña:">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <TextField fx:id="tfEmail" layoutX="289.0" layoutY="140.0" prefHeight="26.0" prefWidth="162.0" style="-fx-border-color: #1D5A8D;" />
+        <Label layoutX="169.0" layoutY="145.0" text="Correo electrónico:">
+            <font>
+                <Font name="System Bold Italic" size="12.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/Imagen%20inicio%20Usuario.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="50.0" fitWidth="46.0" layoutX="8.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/logo.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>
