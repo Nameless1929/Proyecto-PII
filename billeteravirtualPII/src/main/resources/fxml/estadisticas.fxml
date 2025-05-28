@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.billeteravirtual.controller.EstadisticasController"
+      alignment="CENTER" spacing="10" style="-fx-padding: 20;">
+
+    <Text text="Estadísticas" style="-fx-font-size: 18; -fx-font-weight: bold;"/>
+
+    <TabPane fx:id="tabPane" VBox.vgrow="ALWAYS">
+        <Tab text="Gastos por Categoría">
+            <PieChart fx:id="pieChart"/>
+        </Tab>
+        <Tab text="Usuarios con más Transacciones">
+            <BarChart fx:id="transaccionesChart">
+                <xAxis>
+                    <CategoryAxis label="Usuario"/>
+                </xAxis>
+                <yAxis>
+                    <NumberAxis label="Cantidad de Transacciones"/>
+                </yAxis>
+            </BarChart>
+        </Tab>
+        <Tab text="Saldo Promedio">
+            <BarChart fx:id="saldoChart">
+                <xAxis>
+                    <CategoryAxis label="Usuario"/>
+                </xAxis>
+                <yAxis>
+                    <NumberAxis label="Saldo Promedio"/>
+                </yAxis>
+            </BarChart>
+        </Tab>
+    </TabPane>
+
+    <Button fx:id="btnVolver" onAction="#volverADashboard" text="Volver" />
+
+
+</VBox>

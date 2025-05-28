@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" spacing="10" style="-fx-padding: 20;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.billeteravirtual.controller.SignupController">
+    <ImageView fitHeight="36.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../images/logo.png" />
+        </image>
+    </ImageView>
+    <Text style="-fx-font-size: 24; -fx-font-weight: bold;" text="Billetera Virtual" />
+    <Text style="-fx-font-size: 18;" text="Registro de Usuario" />
+
+    <GridPane hgap="10" style="-fx-padding: 10;" vgap="10">
+        <Label text="Nombre completo:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="tfNombre" style="-fx-border-color: #1D5A8D;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Correo electrónico:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="tfEmail" style="-fx-border-color: #1D5A8D;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Teléfono:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="tfTelefono" style="-fx-border-color: #1D5A8D;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label text="Dirección:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextField fx:id="tfDireccion" style="-fx-border-color: #1D5A8D;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <Label text="Contraseña:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <PasswordField fx:id="pfPassword" style="-fx-border-color: #1D5A8D;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+        <Label text="Confirmar contraseña:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <PasswordField fx:id="pfConfirmPassword" style="-fx-border-color: #1D5A8D;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
+
+    <HBox alignment="CENTER" spacing="10">
+        <Button defaultButton="true" onAction="#handleSignup" text="Registrarse" />
+        <Button onAction="#goToLogin" text="Cancelar" />
+    </HBox>
+</VBox>

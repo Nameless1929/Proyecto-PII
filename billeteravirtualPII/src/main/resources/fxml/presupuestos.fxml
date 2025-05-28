@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" spacing="10" style="-fx-padding: 20;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.billeteravirtual.controller.PresupuestosController">
+    <ImageView fitHeight="50.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../images/logo.png" />
+        </image>
+    </ImageView>
+    <Text style="-fx-font-size: 18; -fx-font-weight: bold;" text="Gestión de Presupuestos" />
+
+    <TableView fx:id="tvPresupuestos" style="-fx-padding: 10;">
+        <columns>
+            <TableColumn prefWidth="150" text="Nombre" />
+            <TableColumn prefWidth="150" text="Categoría" />
+            <TableColumn prefWidth="100" text="Monto Total" />
+            <TableColumn prefWidth="100" text="Monto Gastado" />
+        </columns>
+    </TableView>
+
+    <GridPane hgap="10" style="-fx-padding: 10;" vgap="10">
+        <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="tfNombre" style="-fx-border-color: #1D5A8D;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Monto:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="tfMonto" style="-fx-border-color: #1D5A8D;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Categoría:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <ComboBox fx:id="cbCategoria" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
+
+    <HBox alignment="CENTER" spacing="10">
+        <Button defaultButton="true" onAction="#handleAgregarPresupuesto" text="Agregar Presupuesto" />
+        <Button onAction="#handleEliminarPresupuesto" style="-fx-background-color: #ff4444; -fx-text-fill: white;" text="Eliminar Presupuesto" />
+    </HBox>
+</VBox>
