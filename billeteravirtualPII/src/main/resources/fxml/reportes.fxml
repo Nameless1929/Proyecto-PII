@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" spacing="10" style="-fx-padding: 20;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.billeteravirtual.controller.ReportesController">
+    <ImageView fitHeight="50.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../images/logo.png" />
+        </image>
+    </ImageView>
+    <Text style="-fx-font-size: 18; -fx-font-weight: bold;" text="Generar Reportes" />
+
+    <GridPane hgap="10" style="-fx-padding: 10;" vgap="10">
+        <Label text="Fecha Inicio:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <DatePicker fx:id="dpFechaInicio" style="-fx-border-color: #1D5A8D;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Fecha Fin:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <DatePicker fx:id="dpFechaFin" style="-fx-border-color: #1D5A8D;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Tipo de Reporte:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <ComboBox fx:id="cbTipoReporte" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
+
+    <Button defaultButton="true" onAction="#handleGenerarReporte" text="Generar Reporte" />
+</VBox>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" spacing="10" style="-fx-padding: 20;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.billeteravirtual.controller.TransaccionController">
+    <ImageView fitHeight="50.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../images/logo.png" />
+        </image>
+    </ImageView>
+    <Text style="-fx-font-size: 18; -fx-font-weight: bold;" text="Realizar Transacción" />
+
+    <GridPane hgap="10" style="-fx-padding: 10;" vgap="10">
+        <Label text="Tipo de Transacción:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <ComboBox fx:id="cbTipoTransaccion" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Cuenta Origen:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <ComboBox fx:id="cbCuentaOrigen" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Cuenta Destino:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <ComboBox fx:id="cbCuentaDestino" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label text="Monto:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextField fx:id="tfMonto" style="-fx-border-color: #1D5A8D;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <Label text="Descripción:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <TextField fx:id="tfDescripcion" style="-fx-border-color: #1D5A8D;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+        <Label text="Categoría:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <ComboBox fx:id="cbCategoria" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
+
+    <Button defaultButton="true" onAction="#handleRealizarTransaccion" text="Realizar Transacción" />
+</VBox>

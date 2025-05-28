@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.billeteravirtual.controller.UserDashboardController">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="20" style="-fx-padding: 10; -fx-background-color: #f0f0f0;">
+            <Label fx:id="lblWelcome" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+            <ImageView fitHeight="50.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../images/logo.png" />
+                </image>
+            </ImageView>
+            <Label fx:id="lblSaldoTotal" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+            <Button onAction="#handleLogout" style="-fx-background-color: #ff4444; -fx-text-fill: white;" text="Cerrar Sesión" />
+        </HBox>
+    </top>
+
+    <left>
+        <VBox minWidth="200" style="-fx-padding: 10; -fx-spacing: 10;">
+            <Button maxWidth="Infinity" onAction="#goToAddCuenta" style="-fx-border-color: #1D5A8D;" text="Agregar Cuenta" />
+            <Button maxWidth="Infinity" onAction="#goToTransaccion" style="-fx-border-color: #1D5A8D;" text="Realizar Transacción" />
+            <Button maxWidth="Infinity" onAction="#goToPresupuestos" style="-fx-border-color: #1D5A8D;" text="Presupuestos" />
+            <Button maxWidth="Infinity" onAction="#goToReportes" style="-fx-border-color: #1D5A8D;" text="Generar Reportes" />
+
+        </VBox>
+    </left>
+
+
+
+
+
+    <center>
+        <TabPane>
+            <Tab style="#1D5A8D: #1D5A8D;" text="Mis Cuentas">
+                <ListView fx:id="lvCuentas" style="-fx-padding: 10;" />
+            </Tab>
+            <Tab text="Mis Transacciones">
+                <TableView fx:id="tvTransacciones" style="-fx-padding: 10;" />
+            </Tab>
+            <Tab text="Gráficos">
+                <PieChart fx:id="pcGastosPorCategoria" style="-fx-padding: 10;" />
+            </Tab>
+        </TabPane>
+    </center>
+</BorderPane>
